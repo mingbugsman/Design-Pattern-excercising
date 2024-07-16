@@ -1,0 +1,2 @@
+Strategy Pattern: Đây là một mẫu thiết kế mà chúng ta định nghĩa một gia đình các thuật toán, bọc gói từng thuật toán và làm cho chúng có thể hoán đổi cho nhau. 
+Strategy Pattern cho phép thuật toán biến đổi độc lập với các đối tượng sử dụng nó.
