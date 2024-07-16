@@ -38,17 +38,18 @@ function merge(left, right) {
     return [...result, ...left, ...right];
 }
 
+const sorting = {
+    mergesort : mergeSort,
+    bubblesort : bubbleSort,
+    quicksort : quickSort
+}
 class SortContext {
     constructor() {
-        this.sorting = {
-            mergesort : mergeSort,
-            bubblesort : bubbleSort,
-            quicksort : quickSort
-        }
         this.strategy = null;
     }
     setStrategy(strategy) {
-        if (this.sorting[strategy]) { // kiểm tra chiến lược sort có tồn tại trong sorting không
+        console.log(strategy);
+        if (sorting[strategy]) { // kiểm tra chiến lược sort có tồn tại trong sorting không
             this.strategy = strategy;
         }
         else {
@@ -56,9 +57,9 @@ class SortContext {
         }
     }
     sort(array) {
-        if (this.strategy && this.sorting[this.strategy]) {
+        if (this.strategy && sorting[this.strategy]) {
             console.log(`Using strategy sorting ::: ${this.strategy}`)
-            return this.sorting[this.strategy](array);
+            return sorting[this.strategy](array);
         } else {
             console.log('No valid strategy set');
             return [];
