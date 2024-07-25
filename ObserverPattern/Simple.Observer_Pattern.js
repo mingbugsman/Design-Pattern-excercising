@@ -21,7 +21,7 @@ class Subject {
       this.observers.forEach(observer => observer.update(message));
     }
 }
-  
+
 
 class Observer {
     constructor(name) {

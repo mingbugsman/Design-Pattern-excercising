@@ -30,7 +30,7 @@ class Payment {
         if (this.strategyBuy && methodPay[this.strategyBuy]) {
             return methodPay[this.strategyBuy](amount);
         }
-        else return "hình thức thanh toán không tồn tại"
+        else throw new Error("hình thức thành toán không tồn tại");
     }
 }
 export default Payment;
