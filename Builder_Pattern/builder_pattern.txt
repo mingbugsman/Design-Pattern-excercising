@@ -10,3 +10,38 @@ Definition of Builder Pattern
 - Director: This class is responsible for managing the construction process. It uses a builder instance to construct the product by invoking the necessary building steps in a specific order.
 
 - Product: This is the final object that is being constructed. It is usually a complex object with multiple parts.
+
+
+      +---------------------+
+      |      Director       |
+      +---------------------+
+               |
+               |
+               V
+      +---------------------+
+      |      Builder        |
+      +---------------------+
+      | +setPartA()         |
+      | +setPartB()         |
+      | +getResult()        |
+      +---------------------+
+               ^
+               |
+               |
+    +---------------------+
+    |   ConcreteBuilder   |
+    +---------------------+
+    | -product: Product   |
+    | +setPartA()         |
+    | +setPartB()         |
+    | +getResult()        |
+    +---------------------+
+               |
+               |
+               V
+      +---------------------+
+      |      Product        |
+      +---------------------+
+      | -partA              |
+      | -partB              |
+      +---------------------+
